@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "main": "src/server.js",
   "scripts": {
-    "dev": "nodemon"
+    "dev": "nodemon",
+    "migrate": "sequelize-cli db:migrate --config src/config/database.js --migrations-path src/database/migrations",
+    "migrate:undo": "sequelize-cli db:migrate:undo --config src/config/database.js --migrations-path src/database/migrations"
   },
   "keywords": [],
   "author": {
